@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"> <!----navigation bar-->
+            <div class="logo">
+                <a href="#"><img src="images/pglogo.png"></a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="shop.html">Store</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="profile.html"><i class="fa fa-fw fa-user"></i>Username</a></li>
+                <li><a href="shop.html"><img src="images/coin.png">723</a></li>
+                <li><a href=""><i class="fa fa-fw fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+
+        <div id="cartPopup" class="cart-Popup"> <!---Ito yung popup para sa shopping cart-->
+            <div class="title">
+                <h1>Shopping Cart</h1>
+                <a href="#"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="cart-table">
+                <tr>
+                    <td><img src="images/products/Great_Box.png"></td>
+                    <td>
+                        <div class="cart-details">
+                            <h4>Great Box</h4>
+                            <p>1 <span>x</span></p>
+                            <div class="coin-img">
+                                <img src="images/coin.png">
+                                <p>550</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a href="#"><i class="fa fa-close"></i></a></td>
+                </tr>
+                <tr></tr> <!----for space lng to-->
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="images/coin.png">550</td>
+                </tr>
+            </div>
+
+            <div class="cart-button">
+                <button>Cart</button>
+                <button>Checkout</button>
+            </div>
+        </div>
+
+        <div class="bg-header">
+            <img src="images/wallpapers/Checkout.png">
+        </div>
+
+        <div class="payment-container"> <!---input ng payment details-->
+            <div class="title">
+                <h4>Payment Details</h4>
+                <h4>Complete your purchase item by providing your new payment details order</h4>
+            </div>
+
+            <form>
+                <div class="category">
+                    <label for="mastercard"> <!---label sa input type ng mastercard-->
+                        <input type="radio" name="payment" id="mastercard"> <!--radio type ginawa ko since mamimili sila-->
+                        <div class="img">
+                            <img src="images/Mastercard_logo.png">
+                        </div>
+                        <div class="card-detail">
+                            <h5>****    ****    ****    <span>9876</span></h5>
+                            <h5>Akanni Oluwatobiloba    <span>12/24</span></h5>
+                        </div>
+                    </label>
+                    <label for="visa"> <!--label sa input type ng visa-->
+                        <input type="radio" name="payment" id="visa">
+                        <div class="img">
+                            <img src="images/Visa_Logo.png">
+                        </div>
+                        <div class="card-detail">
+                            <h5>****    ****    ****    <span>1235</span></h5>
+                            <h5>Akanni Oluwatobiloba    <span>12/24</span></h5>
+                        </div>
+                    </label>
+                </div>
+            </form>
+
+            <div class="payment-details">
+                <form>
+                    <div class="col-1"> <!---card number, expiry date (month and day), subtotal, and total-->
+                        <h4>Payment Details</h4>
+                        <label for="card-num"><i class="fa fa-id-card-o"></i> Credit Card Number</label>
+                        <input type="text" name="card-num" id="cnum" placeholder="1234 5679 6890 5764">
+                        <label for="exp-date"><i class="fa fa-calendar"></i>Expiry Date</label>
+                        <div class="date">
+                            <input type="text" name="exp-month" id="month" placeholder="Month">
+                            <input type="text" name="exp-day" id="day" placeholder="Day">
+                        </div>
+                            
+                        <h4>Subtotal</h4>
+                        <h4>Total</h4>
+                    </div>
+
+                    <div class="col-2"> <!--ccv, year, prices-->
+                        <label for="ccv">CCV</label>
+                        <input type="text" name="ccv" id="ccv">
+                        <input type="text" name="exp-year" id="year" placeholder="Year">
+                        <div class="pay-subtotal">
+                            <img src="images/coin.png">
+                            <div>
+                                <p>550</p>
+                            </div>
+                        </div>
+                        <div class="pay-total">
+                            <img src="images/coin.png">
+                            <div>
+                                <p>550</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <button>Pay <span><img src="images/coin.png">550</span></button> <!---pay button-->
+        </div>
+
+        <footer> <!----Footer | by column ko siya ginawa, base dun sa wireframe-->
+            <div class="col-1"> <!----column 1-->
+                <h2>Gotta Catch Em' All</h2>
+                <div class="socials">
+                    <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
+                    <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                </div>
+                <div class="policies">
+                    <h6>Privacy Policies</h6>
+                    <h6>Terms of Services</h6>
+                </div>
+                <h5>THIS IS FOR ACADEMIC USE ONLY.
+                    POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
+                    IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
+                </h5>
+            </div>
+
+            <div class="col-2"> <!---column 2-->
+                <img src="images/pglogo.png">
+                <h5>Links</h5>
+                <a href="#">Home</a>
+                <a href="shop.html">Store</a>
+                <a href="history.html">History</a>
+                <a href="profile.html">Profile</a>
+            </div>
+
+            <div class="col-3"> <!---column 3-->
+                <h5>Help</h5>
+                <a href="payment.html">Payment Options</a>
+                <a href="#">Return</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <h6> <!----sa bottom part na to-->
+                Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
+                countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
+                logo are trademarks of Google LLC.
+            </h6>
+        </footer>
+    </div>
+</body>
+</html>

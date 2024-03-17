@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go x Web Stingers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"> <!----navigation bar-->
+            <div class="logo">
+                <a href="#"><img src="images/pglogo.png"></a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="shop.html">Store</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="profile.html"><i class="fa fa-fw fa-user"></i>Username</a></li>
+                <li><a href="shop.html"><img src="images/coin.png">723</a></li>
+                <li><a href=""><i class="fa fa-fw fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+        <div id="cartPopup" class="cart-Popup"> <!---Ito yung popup para sa shopping cart-->
+            <div class="title">
+                <h1>Shopping Cart</h1>
+                <a href="#"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="cart-table">
+                <tr>
+                    <td><img src="images/products/Great_Box.png"></td>
+                    <td>
+                        <div class="cart-details">
+                            <h4>Great Box</h4>
+                            <p>1 <span>x</span></p>
+                            <div class="coin-img">
+                                <img src="images/coin.png">
+                                <p>550</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a href="#"><i class="fa fa-close"></i></a></td>
+                </tr>
+                <tr></tr> <!----for space lng to-->
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="images/coin.png">550</td>
+                </tr>
+            </div>
+
+            <div class="cart-button">
+                <button>Cart</button>
+                <button>Checkout</button>
+            </div>
+        </div>
+
+        <div class="header"> <!------header-->
+            <div class="background">
+                <img src="images/wallpapers/background.png">
+            </div>
+            <div class="trailer"> <!----Dto yung sa videoo, na ilalagay sa laptop, parang overlay-->
+                <img id="background" src="images/wallpapers/laptop2.png">
+
+                <!-- Video Overlay on the laptop -->
+                <video id="video-overlay" autoplay muted loop>
+                    <source src="images/S14_Trailer_16x9_en.mp4" type="video/mp4">
+                </video>
+                <h3>Season 14 - Trailer</h3>
+            </div>
+        </div>
+
+        <div class="new-sales">
+            <!---Carousel Title-->
+            <div class="carousel-title">
+                <h1>Upcoming Sales</h1>
+                <h3>On this upcoming July, awaiting for the 8th anniversary. Items listed here will have 80% sale.</h3>
+                <button>Explore More</button>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <!-- images with text -->
+                <div class="slides">
+                    <img src="images/products/Pokeball small.png">
+                    <h3 class="carousel-text">Pokeballs</h3>
+                </div>
+            
+                <div class="slides">
+                    <img src="images/products/Incubators.png">
+                    <h3 class="carousel-text">Incubators</h3>
+                </div>
+            
+                <div class="slides">
+                    <img src="images/products/Rare_Candies.png">
+                    <h3 class="carousel-text">Rare Candies</h3>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+
+                <!-- The dots/circles -->
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="on-sale"> <!----On Sale Products-->
+            <h1>On Sale Today!</h1>
+
+            <!----Card 1-->
+            <div class="card1">
+                <!---Picture-->
+                <div class="imgBox">
+                  <img src="images/products/Ultra_Box.png">
+                  <h3 class="discount">-50%</h3>
+                </div>
+                
+                <!---Text-->
+                <div class="contentBox">
+                  <h2>Ultra Box</h2>
+                </div>
+            </div>
+
+            <!----Card 2-->
+            <div class="card2">
+                <!---Picture-->
+                <div class="imgBox">
+                  <img src="images/products/Glacial_Lure_Module.png">
+                  <h3 class="discount">-30%</h3>
+                </div>
+                
+                <!---Text-->
+                <div class="contentBox">
+                  <h2>Glacial Lure Module</h2>
+                </div>
+            </div>
+
+            <!----Card 3-->
+            <div class="card3">
+                <!---Picture-->
+                <div class="imgBox">
+                  <img src="images/products/Incubator_Super.png">
+                  <h3 class="discount">-50%</h3>
+                </div>
+                
+                <!---Text-->
+                <div class="contentBox">
+                  <h2>Super Incubator</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="download"> <!--sa may get it on app store ito-->
+            <div class="left-part">
+                <h1>Catch 'Em All Together: Experience the Thrill of Pokemon GO with Friends!</h1>
+                <h3>Join forces with friends in Pokemon GO, the AR mobile game that brings Pokemon into the real world,
+                    Explore your surroundings, discover Pokemon, and engage in epic battles together.
+                    Download now for an unforgettable adventure with friends!
+                </h3>
+                <button class="play-store">Get it on Play Store</button>
+                <button class="app-store">Get it on App Store</button>
+            </div>
+            <div class="right-part">
+                <img src="images/pg_players.jpg">
+            </div>
+        </div>
+
+        <footer> <!----Footer | by column ko siya ginawa, base dun sa wireframe-->
+            <div class="col-1"> <!----column 1-->
+                <h2>Gotta Catch Em' All</h2>
+                <div class="socials">
+                    <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
+                    <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                </div>
+                <div class="policies">
+                    <h6>Privacy Policies</h6>
+                    <h6>Terms of Services</h6>
+                </div>
+                <h5>THIS IS FOR ACADEMIC USE ONLY.
+                    POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
+                    IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
+                </h5>
+            </div>
+
+            <div class="col-2"> <!---column 2-->
+                <img src="images/pglogo.png">
+                <h5>Links</h5>
+                <a href="#">Home</a>
+                <a href="shop.html">Store</a>
+                <a href="history.html">History</a>
+                <a href="profile.html">Profile</a>
+            </div>
+
+            <div class="col-3"> <!---column 3-->
+                <h5>Help</h5>
+                <a href="payment.html">Payment Options</a>
+                <a href="#">Return</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <h6> <!----sa bottom part na to-->
+                Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
+                countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
+                logo are trademarks of Google LLC.
+            </h6>
+        </footer>
+    </div>
+</body>
+</html>

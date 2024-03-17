@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"> <!----navigation bar-->
+            <div class="logo">
+                <a href="#"><img src="images/pglogo.png"></a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="shop.html">Store</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="profile.html"><i class="fa fa-fw fa-user"></i>Username</a></li>
+                <li><a href="shop.html"><img src="images/coin.png">723</a></li>
+                <li><a href=""><i class="fa fa-fw fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+        
+        <div id="cartPopup" class="cart-Popup"> <!---Ito yung popup para sa shopping cart-->
+            <div class="title">
+                <h1>Shopping Cart</h1>
+                <a href="#"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="cart-table">
+                <tr>
+                    <td><img src="images/products/Great_Box.png"></td>
+                    <td>
+                        <div class="cart-details">
+                            <h4>Great Box</h4>
+                            <p>1 <span>x</span></p>
+                            <div class="coin-img">
+                                <img src="images/coin.png">
+                                <p>550</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a href="#"><i class="fa fa-close"></i></a></td>
+                </tr>
+                <tr></tr> <!----for space lng to-->
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="images/coin.png">550</td>
+                </tr>
+            </div>
+
+            <div class="cart-button">
+                <button>Cart</button>
+                <button>Checkout</button>
+            </div>
+        </div>
+
+        <div class="bg-shop"> <!---header background-->
+            <img src="images/wallpapers/Shop.png">
+        </div>
+
+        <div class="box-container"> <!----container ng mga boxes-->
+            <h1>Gift Boxes</h1>
+            <div class="card"> <!--special box-->
+                <div class="img-card">
+                    <img src="images/products/Special_Box.png">
+                </div>
+                <div class="card-content">
+                    <h2>Special Box</h2>
+                    <p>10 Great Ball</p>
+                    <p>2x Incubator</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>250</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--bronze box-->
+                <div class="img-card">
+                    <img src="images/products/Bronze_Box.png">
+                    <h3 class="discount">New</h3> <!---discount sa top right-->
+                </div>
+                <div class="card-content">
+                    <h2>Bronze Box</h2>
+                    <p>100x Pokeball</p>
+                    <p>8x Lure Module</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>460</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--great box-->
+                <div class="img-card">
+                    <img src="images/products/Great_Box.png">
+                    <h3 class="discount">-50%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Great Box</h2>
+                    <p>10 Great Ball</p>
+                    <p>2x Incense</p>
+                    <p>1x Incubator</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>550</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--ultra box-->
+                <div class="img-card">
+                    <img src="images/products/Ultra_Box.png">
+                    <h3 class="discount">-50%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Ultra Box</h2>
+                    <p>20x Ultra Ball</p>
+                    <p>25x Incense</p>
+                    <p>6x Incubator</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>750</p>
+                        <p>1550</p> <!---yung may crossover na price-->
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--silver box-->
+                <div class="img-card">
+                    <img src="images/products/Silver_Box.png">
+                </div>
+                <div class="card-content">
+                    <h2>Silver Box</h2>
+                    <p>8x Incense</p>
+                    <p>8x Lucky Egg</p>
+                    <p>8x Lure Module</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>980</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--gold box-->
+                <div class="img-card">
+                    <img src="images/products/Gold_Box.png">
+                    <h3 class="discount">-30%</h3> <!---discount sa top right-->
+                </div>
+                <div class="card-content">
+                    <h2>Gold Box</h2>
+                    <p>50x Great Ball</p>
+                    <p>25x Incense</p>
+                    <p>25x Lucky Egg</p>
+                    <p>16x Lure Module</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>1710</p>
+                        <p>2480</p> <!---crossover price-->
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="coins-container"> <!----container ng mga coins-->
+            <h1>Coins</h1>
+            <div class="card"> <!--600 coins-->
+                <div class="img-card">
+                    <img src="images/products/600 Coins.png">
+                </div>
+                <div class="card-content">
+                    <h2>600 Pokecoins</h2>
+                    <p>+50 Web Store Bonus Coins</p>
+                    <div class="price">
+                        <p><span>&#8369</span>149.00</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--1300 coins-->
+                <div class="img-card">
+                    <img src="images/products/1300 Coins.png">
+                </div>
+                <div class="card-content">
+                    <h2>1300 Pokecoins</h2>
+                    <p>+100 Web Store Bonus Coins</p>
+                    <div class="price">
+                        <p><span>&#8369</span>289.00</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--2700 coins-->
+                <div class="img-card">
+                    <img src="images/products/2700 Coins.png">
+                </div>
+                <div class="card-content">
+                    <h2>2700 Pokecoins</h2>
+                    <p>+2000 Web Store Bonus Coins</p>
+                    <div class="price">
+                        <p><span>&#8369</span>589.00</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--5600 coins-->
+                <div class="img-card">
+                    <img src="images/products/5600 Coins.png">
+                </div>
+                <div class="card-content">
+                    <h2>5600 Pokecoins</h2>
+                    <p>+400 Web Store Bonus Coins</p>
+                    <div class="price">
+                        <p><span>&#8369</span>1169.00</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--15500 coins-->
+                <div class="img-card">
+                    <img src="images/products/15500 Coins.png">
+                </div>
+                <div class="card-content">
+                    <h2>15500 Pokecoins</h2>
+                    <p>+1000 Web Store Bonus Coins</p>
+                    <div class="price">
+                        <p><span>&#8369</span>2950.00</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokeballs-container"> <!----container ng mga pokeballs-->
+            <h1>Pokeballs</h1>
+            <div class="card"> <!--20 pokeballs-->
+                <div class="img-card">
+                    <img src="images/products/Pokeball small.png">
+                </div>
+                <div class="card-content">
+                    <h2>20 Pokeballs</h2>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>100</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--100 pokeballs-->
+                <div class="img-card">
+                    <img src="images/products/100 pokeballs.png">
+                </div>
+                <div class="card-content">
+                    <h2>100 Pokeballs</h2>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>460</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--200 pokeballs-->
+                <div class="img-card">
+                    <img src="images/products/200 Pokeballs.png">
+                    <h3 class="discount">-30%</h3> <!---discount-->
+                </div>
+                <div class="card-content">
+                    <h2>200 Pokeballs</h2>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>660</p>
+                        <p>800</p> <!---crossover price-->
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--400 pokeballs-->
+                <div class="img-card">
+                    <img src="images/products/400 Pokeballs.png">
+                    <h3 class="discount">-50%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>400 Pokeballs</h2>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>800</p>
+                        <p>1600</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="incubator"> <!----container ng mga incubators-->
+            <h1>Egg Incubator</h1>
+            <div class="card"> <!--incubator-->
+                <div class="img-card">
+                    <img src="images/products/Incubator.png">
+                </div>
+                <div class="card-content">
+                    <h2>Incubator</h2>
+                    <p>Breaks after 3 use</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>150</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--2 incubators-->
+                <div class="img-card">
+                    <img src="images/products/2 Incubators.png">
+                    <h3 class="discount">-20%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>2 Incubators</h2>
+                    <p>Breaks after 3 use</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>270</p>
+                        <p>300</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--super incubator-->
+                <div class="img-card">
+                    <img src="images/products/Incubator_Super.png"> 
+                </div>
+                <div class="card-content">
+                    <h2>Super Incubator</h2>
+                    <p>33% faster than a regualr incubator</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>200</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--2 super incubators-->
+                <div class="img-card">
+                    <img src="images/products/2 Super Incubators.png">
+                    <h3 class="discount">-20%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>2 Super Incubators</h2>
+                    <p>33% faster than a regular incubator</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>320</p>
+                        <p>400</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lure-module"> <!----container ng mga modules-->
+            <h1>Lure Modules</h1>
+            <div class="card"> <!--glacial lure module-->
+                <div class="img-card">
+                    <img src="images/products/Glacial_Lure_Module.png">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Glacial Lure Module</h2>
+                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>140</p>
+                        <p>200</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--mossy lure module-->
+                <div class="img-card">
+                    <img src="images/products/GO_Mossy_Lure_Module.png">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Mossy Lure Module</h2>
+                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>140</p>
+                        <p>200</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+ 
+            <div class="card"> <!--magnetic lure module-->
+                <div class="img-card">
+                    <img src="images/products/GO_Magnetic_Lure_Module.png">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Magnetic Lure Module</h2>
+                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>140</p>
+                        <p>200</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--rainy lure module-->
+                <div class="img-card">
+                    <img src="images/products/GO_rainy_Lure_Module.png">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Rainy Lure Module</h2>
+                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>140</p>
+                        <p>200</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--lure module-->
+                <div class="img-card">
+                    <img src="images/products/Lure_Module.png">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Lure Module</h2>
+                    <p>Attracts Pokemon to a Pokestop for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>70</p>
+                        <p>100</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--2 lure modules-->
+                <div class="img-card">
+                    <img src="images/products/2 Lure Modules.png">
+                    <h3 class="discount">-50%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>2 Lure Modules</h2>
+                    <p>Attracts Pokemon to a Pokestop for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png">
+                        <p>100</p>
+                        <p>200</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="raid-pass"> <!----container ng mga raid pass-->
+            <h1>Raid Pass</h1>
+            <div class="card"> <!--raid pass-->
+                <div class="img-card">
+                    <img src="images/products/Raid_Pass.png">
+                    <h3 class="discount">Free</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Raid Pass</h2>
+                    <p>Pass to join a Raid Battle</p>
+                    <div class="price">
+                        <p>Free</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+
+            <div class="card"> <!--premium raid pass-->
+                <div class="img-card">
+                    <img src="images/products/Premium_Battle_Pass.png">
+                    <h3 class="discount">New</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Premium Raid Pass</h2>
+                    <p>Earn premium rewards in the GO Battle League</p>
+                    <div class="price">
+                        <p>150</p>
+                    </div>
+                </div>
+
+                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                    <button>Add to Cart</button>
+                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button>Like</button>
+                </div>
+            </div>
+        </div>
+
+        <footer> <!----Footer | by column ko siya ginawa, base dun sa wireframe-->
+            <div class="col-1"> <!----column 1-->
+                <h2>Gotta Catch Em' All</h2>
+                <div class="socials">
+                    <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
+                    <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                </div>
+                <div class="policies">
+                    <h6>Privacy Policies</h6>
+                    <h6>Terms of Services</h6>
+                </div>
+                <h5>THIS IS FOR ACADEMIC USE ONLY.
+                    POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
+                    IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
+                </h5>
+            </div>
+
+            <div class="col-2"> <!---column 2-->
+                <img src="images/pglogo.png">
+                <h5>Links</h5>
+                <a href="#">Home</a>
+                <a href="shop.html">Store</a>
+                <a href="history.html">History</a>
+                <a href="profile.html">Profile</a>
+            </div>
+
+            <div class="col-3"> <!---column 3-->
+                <h5>Help</h5>
+                <a href="payment.html">Payment Options</a>
+                <a href="#">Return</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <h6> <!----sa bottom part na to-->
+                Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
+                countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
+                logo are trademarks of Google LLC.
+            </h6>
+        </footer>
+    </div>
+</body>
+</html>
