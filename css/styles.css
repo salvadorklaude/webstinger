@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: aqua;
+    border-bottom: 2px solid #fff;
+    padding: 10px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px; 
+}
+
+.navbar .links ul {
+    list-style-type: none;
+}
+
+.navbar .links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar .links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .links ul li a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h2 {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+#coin{ 
+    width: 20px; 
+    height: auto; 
+}
+.search-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.filter-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.filter-options {
+    display: none;
+}
