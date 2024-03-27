@@ -74,3 +74,20 @@ footer {
 .filter-options {
     display: none;
 }
+.photo-collage-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.photo-collage-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Adjustments for your existing container */
+.container {
+    max-width: 1200px; /* Adjust the maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add padding to the sides of the container */
+}

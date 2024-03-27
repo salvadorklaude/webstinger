@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Link your custom CSS file -->
+    <link href="css/styles.css" rel="stylesheet">
     <title>Store</title>
 </head>
 <body>
+  
     <div class="container">
-        <div class="navbar"> <!----navigation bar-->
-            <div class="logo">
-                <a href="#"><img src="images/pglogo.png"></a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/pglogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Pokemon Go
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html"><i class="fa fa-fw fa-user"></i> Username</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html"><img src="images/coin.png" id ="coin" alt="Coins"> 723</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-fw fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
             </div>
-            <ul class="links">
-                <li><a href="#">Home</a></li>
-                <li><a href="shop.html">Store</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="profile.html"><i class="fa fa-fw fa-user"></i>Username</a></li>
-                <li><a href="shop.html"><img src="images/coin.png">723</a></li>
-                <li><a href=""><i class="fa fa-fw fa-shopping-cart"></i></a></li>
-            </ul>
-        </div>
+        </nav>
+
         
         <div id="cartPopup" class="cart-Popup"> <!---Ito yung popup para sa shopping cart-->
             <div class="title">
@@ -64,42 +91,50 @@
         </div>
 
         <div class="box-container"> <!----container ng mga boxes-->
+        <div class="photo-collage container">
             <h1>Gift Boxes</h1>
-            <div class="card"> <!--special box-->
-                <div class="img-card">
-                    <img src="images/products/Special_Box.png">
-                </div>
-                <div class="card-content">
-                    <h2>Special Box</h2>
-                    <p>10 Great Ball</p>
-                    <p>2x Incubator</p>
-                    <div class="price">
-                        <img src="images/coin.png">
-                        <p>250</p>
-                    </div>
-                </div>
+            <!-- Special box -->
+    <div class="card">
+        <div class="img-card">
+        <img src="images/products/Special_Box.png">
+        </div>
+        <div class="card-content">
+        <h2>Special Box</h2>
+        <p>10 Great Ball</p>
+        <p>2x Incubator</p>
+        <div class="price">
+            <img src="images/coin.png">
+            <p>250</p>
+        </div>
+    </div>
+    <div class="card-options">
+        <button class="btn btn-primary">Add to Cart</button> <!-- Apply Bootstrap classes -->
+        <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button> <!-- Apply Bootstrap classes -->
+        <button type="button" class="btn btn-primary">Like</button> <!-- Apply Bootstrap classes -->
+    </div>
+</div>
 
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button>Add to Cart</button>
-                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
-                    <button>Like</button>
-                </div>
-            </div>
-
-            <div class="card"> <!--bronze box-->
-                <div class="img-card">
-                    <img src="images/products/Bronze_Box.png">
-                    <h3 class="discount">New</h3> <!---discount sa top right-->
-                </div>
-                <div class="card-content">
-                    <h2>Bronze Box</h2>
-                    <p>100x Pokeball</p>
-                    <p>8x Lure Module</p>
-                    <div class="price">
-                        <img src="images/coin.png">
-                        <p>460</p>
-                    </div>
-                </div>
+<!-- Bronze box -->
+<div class="card">
+    <div class="img-card">
+        <img src="images/products/Bronze_Box.png">
+        <h3 class="discount">New</h3>
+    </div>
+    <div class="card-content">
+        <h2>Bronze Box</h2>
+        <p>100x Pokeball</p>
+        <p>8x Lure Module</p>
+        <div class="price">
+            <img src="images/coin.png">
+            <p>460</p>
+        </div>
+    </div>
+    <div class="card-options">
+        <button class="btn btn-primary">Add to Cart</button> <!-- Apply Bootstrap classes -->
+        <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button> <!-- Apply Bootstrap classes -->
+        <button type="button" class="btn btn-primary">Like</button> <!-- Apply Bootstrap classes -->
+    </div>
+</div>
 
                 <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
                     <button>Add to Cart</button>
@@ -150,7 +185,7 @@
 
                 <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
                     <button>Add to Cart</button>
-                    <button><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button tyoe="button" class="btn btn-primary"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button>Like</button>
                 </div>
             </div>
@@ -648,47 +683,61 @@
                 </div>
             </div>
         </div>
+        </div>
 
-        <footer> <!----Footer | by column ko siya ginawa, base dun sa wireframe-->
-            <div class="col-1"> <!----column 1-->
-                <h2>Gotta Catch Em' All</h2>
-                <div class="socials">
-                    <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
-                    <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
-                    <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+        <footer class="mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Gotta Catch Em' All</h2>
+                        <div class="socials">
+                            <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
+                            <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                            <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                        <div class="policies">
+                            <h6>Privacy Policies</h6>
+                            <h6>Terms of Services</h6>
+                        </div>
+                        <h5>THIS IS FOR ACADEMIC USE ONLY.
+                            POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
+                            IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
+                        </h5>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <img src="images/pglogo.png" class="img-fluid" alt="Pokemon Go Logo">
+                        <h5>Links</h5>
+                        <a href="#">Home</a>
+                        <a href="shop.html">Store</a>
+                        <a href="history.html">History</a>
+                        <a href="profile.html">Profile</a>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <h5>Help</h5>
+                        <a href="payment.html">Payment Options</a>
+                        <a href="#">Return</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
                 </div>
-                <div class="policies">
-                    <h6>Privacy Policies</h6>
-                    <h6>Terms of Services</h6>
+        
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <small>
+                            Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
+                            countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
+                            logo are trademarks of Google LLC.
+                        </small>
+                    </div>
                 </div>
-                <h5>THIS IS FOR ACADEMIC USE ONLY.
-                    POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
-                    IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
-                </h5>
             </div>
-
-            <div class="col-2"> <!---column 2-->
-                <img src="images/pglogo.png">
-                <h5>Links</h5>
-                <a href="#">Home</a>
-                <a href="shop.html">Store</a>
-                <a href="history.html">History</a>
-                <a href="profile.html">Profile</a>
-            </div>
-
-            <div class="col-3"> <!---column 3-->
-                <h5>Help</h5>
-                <a href="payment.html">Payment Options</a>
-                <a href="#">Return</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-
-            <h6> <!----sa bottom part na to-->
-                Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
-                countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
-                logo are trademarks of Google LLC.
-            </h6>
         </footer>
-    </div>
+        
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
