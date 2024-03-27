@@ -3,24 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go x Web Stingers</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Settings</title>
 </head>
 <body>
     <div class="container">
-        <div class="navbar"> <!----navigation bar-->
-            <div class="logo">
-                <a href="#"><img src="images/pglogo.png"></a>
-            </div>
-            <ul class="links">
-                <li><a href="#">Home</a></li>
-                <li><a href="shop.html">Store</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="profile.html"><i class="fa fa-fw fa-user"></i>Username</a></li>
-                <li><a href="shop.html"><img src="images/coin.png">723</a></li>
-                <li><a href=""><i class="fa fa-fw fa-shopping-cart"></i></a></li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/pglogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Pokemon Go
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html"><i class="fa fa-fw fa-user"></i> Username</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html"><img src="images/coin.png" id ="coin" alt="Coins"> 723</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-fw fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <div id="cartPopup" class="cart-Popup"> <!---Ito yung popup para sa shopping cart-->
             <div class="title">
                 <h1>Shopping Cart</h1>
@@ -150,46 +173,55 @@
             </div>
         </div>
 
-        <footer> <!----Footer | by column ko siya ginawa, base dun sa wireframe-->
-            <div class="col-1"> <!----column 1-->
-                <h2>Gotta Catch Em' All</h2>
-                <div class="socials">
-                    <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
-                    <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
-                    <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+        <footer class="mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Gotta Catch Em' All</h2>
+                        <div class="socials">
+                            <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
+                            <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                            <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                        <div class="policies">
+                            <h6>Privacy Policies</h6>
+                            <h6>Terms of Services</h6>
+                        </div>
+                        <h5>THIS IS FOR ACADEMIC USE ONLY.
+                            POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
+                            IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
+                        </h5>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <img src="images/pglogo.png" class="img-fluid" alt="Pokemon Go Logo">
+                        <h5>Links</h5>
+                        <a href="#">Home</a>
+                        <a href="shop.html">Store</a>
+                        <a href="history.html">History</a>
+                        <a href="profile.html">Profile</a>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <h5>Help</h5>
+                        <a href="payment.html">Payment Options</a>
+                        <a href="#">Return</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
                 </div>
-                <div class="policies">
-                    <h6>Privacy Policies</h6>
-                    <h6>Terms of Services</h6>
+        
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <small>
+                            Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
+                            countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
+                            logo are trademarks of Google LLC.
+                        </small>
+                    </div>
                 </div>
-                <h5>THIS IS FOR ACADEMIC USE ONLY.
-                    POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
-                    IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
-                </h5>
             </div>
-
-            <div class="col-2"> <!---column 2-->
-                <img src="images/pglogo.png">
-                <h5>Links</h5>
-                <a href="#">Home</a>
-                <a href="shop.html">Store</a>
-                <a href="history.html">History</a>
-                <a href="profile.html">Profile</a>
-            </div>
-
-            <div class="col-3"> <!---column 3-->
-                <h5>Help</h5>
-                <a href="payment.html">Payment Options</a>
-                <a href="#">Return</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-
-            <h6> <!----sa bottom part na to-->
-                Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
-                countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
-                logo are trademarks of Google LLC.
-            </h6>
         </footer>
+        
     </div>
 </body>
 </html>
