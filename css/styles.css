@@ -59,9 +59,18 @@ footer {
     padding: 20px;
     text-align: center;
 }
+#coin-shop{
+    width: 60px; 
+    height: 60px; 
+
+}
+#item-shop{
+    width: auto;
+    height: auto;
+}
 #coin{ 
-    width: 20px; 
-    height: auto; 
+    width: 60px; 
+    height: 60px; 
 }
 .search-container {
     margin-top: 20px;
