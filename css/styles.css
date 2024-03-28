@@ -121,3 +121,23 @@ footer {
 .history-container {
     padding: 20px 0; /* Add some padding for spacing */
 }
+.cart-header {
+    background-color: #f8f9fa; /* Background color of the header */
+    padding: 20px 0; /* Add some padding for spacing */
+    text-align: center; /* Center align the content */
+}
+.cart-header img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
+.cart-container {
+    margin-top: 20px; /* Add margin to separate it from the header */
+    text-align: center; /* Center align the content */
+}
+.cart-table {
+    display: inline-block; /* Display as inline-block to center align */
+    text-align: left; /* Align the table contents to the left */
+    width: 80%; /* Set the width of the table */
+    max-width: 800px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the table horizontally */
+    padding: 20px; /* Add some padding for spacing */
+}
