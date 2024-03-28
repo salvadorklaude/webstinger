@@ -141,3 +141,19 @@ footer {
     margin: 0 auto; /* Center the table horizontally */
     padding: 20px; /* Add some padding for spacing */
 }
+.profile-display img {
+    max-width: 100px; /* Adjust the maximum width of the profile picture */
+    height: auto; /* Maintain the aspect ratio */
+}
+.left-side img {
+    max-width: 50px; /* Adjust the maximum width of the small icons */
+    height: auto; /* Maintain the aspect ratio */
+}
+.profile-pic {
+    width: 100px; /* Adjust the width of the profile picture */
+    height: auto; /* Maintain aspect ratio */
+}
+.edit-profile-icon {
+    width: 20px; /* Adjust the width of the edit profile icon */
+    height: auto; /* Maintain aspect ratio */
+}

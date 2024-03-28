@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokemon Go x Web Stingers</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go x Web Stingers</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
     <div class="container">
        <!-- Navigation Bar -->
@@ -44,83 +44,115 @@
             </ul>
         </div>
     </nav>
-        <div class="login-box"> <!---log in form-->
-            <h2>Login</h2>
-            <button><img src="images/facebook_logo.png">Continue with Facebook</button>
-            <button><img src="images/google_logo.png">Continue with Google</button>
-            <button><img src="images/apple_logo.png">Continue with Apple</button>
-            <hr>
-            <span>Or</span>
-
-            <form>
+    <div class="login-box"> <!---log in form-->
+        <h2>Login</h2>
+        <form id="loginForm" method="post" action="login.php" novalidate>
+            <div class="form-group">
                 <label for="email">Email Address</label> <!--for email-->
-                <input type="text" required>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
 
-                <div class="password-label"> <!--for passsword-->
-                    <label for="password">Your Password</label>
-                    <i class="uil uil-eye-slash">Hide</i>
-                </div>
-                <input type="password" id="password" required>
+            <div class="form-group">
+                <label for="password">Password</label> <!--for passsword-->
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="invalid-feedback">Please enter your password.</div>
+            </div>
 
-                <a href="#">Forget Your Password</a> <!--forget password-->
-                <h6><input type="checkbox">Keep me signed in until I sign out</h6> <!---keep me sign in-->
-                <a href="index.html"><button>Log In</button></a> <!---log in button-->
-                <hr>
-                <h4>Don't have an account?</h4>
-                <a href="signup.html"><button>Sign Up</button></a> <!---sign up button-->
-            </form>
-        </div>
-
-        <footer class="mt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2>Gotta Catch Em' All</h2>
-                        <div class="socials">
-                            <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
-                            <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
-                            <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                        <div class="policies">
-                            <h6>Privacy Policies</h6>
-                            <h6>Terms of Services</h6>
-                        </div>
-                        <h5>THIS IS FOR ACADEMIC USE ONLY.
-                            POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
-                            IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
-                        </h5>
-                    </div>
-        
-                    <div class="col-md-4">
-                        <img src="images/pglogo.png" class="img-fluid" alt="Pokemon Go Logo">
-                        <h5>Links</h5>
-                        <a href="#">Home</a>
-                        <a href="shop.html">Store</a>
-                        <a href="history.html">History</a>
-                        <a href="profile.html">Profile</a>
-                    </div>
-        
-                    <div class="col-md-4">
-                        <h5>Help</h5>
-                        <a href="payment.html">Payment Options</a>
-                        <a href="#">Return</a>
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                </div>
-        
-                <div class="row mt-3">
-                    <div class="col-md-12">
-                        <small>
-                            Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
-                            countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
-                            logo are trademarks of Google LLC.
-                        </small>
-                    </div>
+            <button type="submit" class="btn btn-primary">Log In</button> <!---log in button-->
+            <hr>
+            <div class="form-group">
+                <label>Or Log In With:</label>
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i> Log in with Facebook</a>
+                    <a href="#" class="btn btn-danger"><i class="fa fa-google"></i> Log in with Google</a>
                 </div>
             </div>
-        </footer>
-        
-
+            <hr>
+            <a href="#">Forgot Your Password?</a> <!--forget password-->
+            <hr>
+            <h4>Don't have an account?</h4>
+            <a href="signup.html"><button type="button" class="btn btn-success">Sign Up</button></a> <!---sign up button-->
+        </form>
     </div>
+
+        <footer class="mt-5">
+            <!-- Footer content -->
+        </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Gotta Catch Em' All</h2>
+                    <div class="socials">
+                        <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
+                        <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                        <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                    <div class="policies">
+                        <h6>Privacy Policies</h6>
+                        <h6>Terms of Services</h6>
+                    </div>
+                    <h5>THIS IS FOR ACADEMIC USE ONLY.
+                        POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
+                        IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
+                    </h5>
+                </div>
+    
+                <div class="col-md-4">
+                    <img src="images/pglogo.png" class="img-fluid" alt="Pokemon Go Logo">
+                    <h5>Links</h5>
+                    <a href="#">Home</a>
+                    <a href="shop.html">Store</a>
+                    <a href="history.html">History</a>
+                    <a href="profile.html">Profile</a>
+                </div>
+    
+                <div class="col-md-4">
+                    <h5>Help</h5>
+                    <a href="payment.html">Payment Options</a>
+                    <a href="#">Return</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+    
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <small>
+                        Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
+                        countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
+                        logo are trademarks of Google LLC.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+    <script>
+        // JavaScript form validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var form = document.getElementById('loginForm');
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
 </body>
 </html>
