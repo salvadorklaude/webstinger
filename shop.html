@@ -90,52 +90,57 @@
             <img src="images/wallpapers/Shop.png">
         </div>
 
-        <div class="box-container"> <!----container ng mga boxes-->
-        <div class="photo-collage container">
-            <h1>Gift Boxes</h1>
-            <!-- Special box -->
-    <div class="card">
-        <div class="img-card">
-        <img src="images/products/Special_Box.png" id="item-shop">
+<div class="box-grid-container">
+    <h1>Gift Boxes</h1>
+    <div class="row">
+        <!-- Special box -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="img-card">
+                    <img src="images/products/Special_Box.png" id="item-shop">
+                </div>
+                <div class="card-content">
+                    <h2>Special Box</h2>
+                    <p>10 Great Ball</p>
+                    <p>2x Incubator</p>
+                    <div class="price">
+                        <img src="images/coin.png" id="coin-shop">
+                        <p>250</p>
+                    </div>
+                </div>
+                <div class="card-options">
+                    <button class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button type="button" class="btn btn-primary">Like</button>
+                </div>
+            </div>
         </div>
-        <div class="card-content">
-        <h2>Special Box</h2>
-        <p>10 Great Ball</p>
-        <p>2x Incubator</p>
-        <div class="price">
-            <img src="images/coin.png" id="coin-shop">
-            <p>250</p>
+        <!-- Bronze box -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="img-card">
+                    <img src="images/products/Bronze_Box.png" id="item-shop">
+                    <h3 class="discount">New</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Bronze Box</h2>
+                    <p>100x Pokeball</p>
+                    <p>8x Lure Module</p>
+                    <div class="price">
+                        <img src="images/coin.png" id="coin-shop">
+                        <p>460</p>
+                    </div>
+                </div>
+                <div class="card-options">
+                    <button class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button type="button" class="btn btn-primary">Like</button>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card-options">
-        <button class="btn btn-primary">Add to Cart</button> <!-- Apply Bootstrap classes -->
-        <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button> <!-- Apply Bootstrap classes -->
-        <button type="button" class="btn btn-primary">Like</button> <!-- Apply Bootstrap classes -->
-    </div>
-</div>
-
-<!-- Bronze box -->
-<div class="card">
-    <div class="img-card">
-        <img src="images/products/Bronze_Box.png" id="item-shop">
-        <h3 class="discount">New</h3>
-    </div>
-    <div class="card-content">
-        <h2>Bronze Box</h2>
-        <p>100x Pokeball</p>
-        <p>8x Lure Module</p>
-        <div class="price">
-            <img src="images/coin.png" id="coin-shop">
-            <p>460</p>
-        </div>
-    </div>
-    <div class="card-options">
-        <button class="btn btn-primary">Add to Cart</button> <!-- Apply Bootstrap classes -->
-        <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button> <!-- Apply Bootstrap classes -->
-        <button type="button" class="btn btn-primary">Like</button> <!-- Apply Bootstrap classes -->
-    </div>
-</div>
-            <div class="card"> <!--great box-->
+        <!-- Great box -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Great_Box.png" id="item-shop">
                     <h3 class="discount">-50%</h3>
@@ -150,15 +155,16 @@
                         <p>550</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                <div class="card-options">
+                    <button class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--ultra box-->
+        </div>
+        <!-- Ultra box -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Ultra_Box.png" id="item-shop">
                     <h3 class="discount">-50%</h3>
@@ -171,18 +177,21 @@
                     <div class="price">
                         <img src="images/coin.png" id="coin-shop">
                         <p>750</p>
-                        <p>1550</p> <!---yung may crossover na price-->
+                        <p>1550</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                <div class="card-options">
+                    <button class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--silver box-->
+        </div>
+    </div>
+    <div class="row">
+        <!-- Silver box -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Silver_Box.png" id="item-shop">
                 </div>
@@ -196,18 +205,19 @@
                         <p>980</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                <div class="card-options">
+                    <button class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--gold box-->
+        </div>
+        <!-- Gold box -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Gold_Box.png" id="item-shop">
-                    <h3 class="discount">-30%</h3> <!---discount sa top right-->
+                    <h3 class="discount">-30%</h3>
                 </div>
                 <div class="card-content">
                     <h2>Gold Box</h2>
@@ -218,21 +228,25 @@
                     <div class="price">
                         <img src="images/coin.png" id="coin-shop">
                         <p>1710</p>
-                        <p>2480</p> <!---crossover price-->
+                        <p>2480</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                <div class="card-options">
+                    <button class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="coins-container"> <!----container ng mga coins-->
-            <h1>Coins</h1>
-            <div class="card"> <!--600 coins-->
+<div class="coins-container">  
+    <h1>Coins</h1>
+    <div class="row">
+        <!-- 600 coins -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/600 Coins.png" id="item-shop">
                 </div>
@@ -240,18 +254,19 @@
                     <h2>600 Pokecoins</h2>
                     <p>+50 Web Store Bonus Coins</p>
                     <div class="price">
-                        <p><span>&#8369</span>149.00</p>
+                        <p><span>&#8369;</span>149.00</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--1300 coins-->
+        </div>
+        <!-- 1300 coins -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/1300 Coins.png" id="item-shop">
                 </div>
@@ -259,18 +274,19 @@
                     <h2>1300 Pokecoins</h2>
                     <p>+100 Web Store Bonus Coins</p>
                     <div class="price">
-                        <p><span>&#8369</span>289.00</p>
+                        <p><span>&#8369;</span>289.00</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--2700 coins-->
+        </div>
+        <!-- 2700 coins -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/2700 Coins.png" id="item-shop">
                 </div>
@@ -278,18 +294,19 @@
                     <h2>2700 Pokecoins</h2>
                     <p>+2000 Web Store Bonus Coins</p>
                     <div class="price">
-                        <p><span>&#8369</span>589.00</p>
+                        <p><span>&#8369;</span>589.00</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--5600 coins-->
+        </div>
+        <!-- 5600 coins -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/5600 Coins.png" id="item-shop">
                 </div>
@@ -297,18 +314,21 @@
                     <h2>5600 Pokecoins</h2>
                     <p>+400 Web Store Bonus Coins</p>
                     <div class="price">
-                        <p><span>&#8369</span>1169.00</p>
+                        <p><span>&#8369;</span>1169.00</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--15500 coins-->
+        </div>
+    </div>
+    <div class="row">
+        <!-- 15500 coins -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/15500 Coins.png" id="item-shop">
                 </div>
@@ -316,21 +336,24 @@
                     <h2>15500 Pokecoins</h2>
                     <p>+1000 Web Store Bonus Coins</p>
                     <div class="price">
-                        <p><span>&#8369</span>2950.00</p>
+                        <p><span>&#8369;</span>2950.00</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
         </div>
-
-        <div class="pokeballs-container"> <!----container ng mga pokeballs-->
-            <h1>Pokeballs</h1>
-            <div class="card"> <!--20 pokeballs-->
+    </div>
+</div>
+<div class="pokeballs-container">
+    <h1>Pokeballs</h1>
+    <div class="row">
+        <!-- 20 pokeballs -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Pokeball small.png" id="item-shop">
                 </div>
@@ -341,15 +364,16 @@
                         <p>100</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--100 pokeballs-->
+        </div>
+        <!-- 100 pokeballs -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/100 pokeballs.png" id="item-shop">
                 </div>
@@ -360,36 +384,38 @@
                         <p>460</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--200 pokeballs-->
+        </div>
+        <!-- 200 pokeballs -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/200 Pokeballs.png" id="item-shop">
-                    <h3 class="discount">-30%</h3> <!---discount-->
+                    <h3 class="discount">-30%</h3>
                 </div>
                 <div class="card-content">
                     <h2>200 Pokeballs</h2>
                     <div class="price">
                         <img src="images/coin.png" id="coin-shop">
                         <p>660</p>
-                        <p>800</p> <!---crossover price-->
+                        <p>800</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--400 pokeballs-->
+        </div>
+        <!-- 400 pokeballs -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/400 Pokeballs.png" id="item-shop">
                     <h3 class="discount">-50%</h3>
@@ -402,79 +428,87 @@
                         <p>1600</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="incubator"> <!----container ng mga incubators-->
-            <h1>Egg Incubator</h1>
-            <div class="card"> <!--incubator-->
+<h1>Egg Incubator</h1>
+<div class="incubator">
+    <div class="row">
+        <!-- Incubator -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Incubator.png" id="item-shop">
                 </div>
                 <div class="card-content">
                     <h2>Incubator</h2>
-                    <p>Breaks after 3 use</p>
+                    <p>Breaks after 3 uses</p>
                     <div class="price">
                         <img src="images/coin.png" id="coin-shop">
                         <p>150</p>
                     </div>
                 </div>
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--2 incubators-->
+        </div>
+        <!-- 2 Incubators -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/2 Incubators.png" id="item-shop">
                     <h3 class="discount">-20%</h3>
                 </div>
                 <div class="card-content">
                     <h2>2 Incubators</h2>
-                    <p>Breaks after 3 use</p>
+                    <p>Breaks after 3 uses</p>
                     <div class="price">
                         <img src="images/coin.png" id="coin-shop">
                         <p>270</p>
                         <p>300</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--super incubator-->
+        </div>
+        <!-- Super Incubator -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
-                    <img src="images/products/Incubator_Super.png" id="item-shop"> 
+                    <img src="images/products/Incubator_Super.png" id="item-shop">
                 </div>
                 <div class="card-content">
                     <h2>Super Incubator</h2>
-                    <p>33% faster than a regualr incubator</p>
+                    <p>33% faster than a regular incubator</p>
                     <div class="price">
                         <img src="images/coin.png" id="coin-shop">
                         <p>200</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--2 super incubators-->
+        </div>
+        <!-- 2 Super Incubators -->
+        <div class="col-md-3">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/2 Super Incubators.png" id="item-shop">
                     <h3 class="discount">-20%</h3>
@@ -488,158 +522,164 @@
                         <p>400</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
         </div>
-
-        <div class="lure-module"> <!----container ng mga modules-->
-            <h1>Lure Modules</h1>
-            <div class="card"> <!--glacial lure module-->
+    </div>
+</div>
+<div class="lure-module">
+    <h1>Lure Modules</h1>
+    <div class="row">
+        <!-- Glacial Lure Module -->
+        <div class="col-md-4">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Glacial_Lure_Module.png" id="item-shop">
                     <h3 class="discount">-30%</h3>
                 </div>
                 <div class="card-content">
                     <h2>Glacial Lure Module</h2>
-                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
+                    <p>Attracts more Pokémon than usual for 30 minutes.</p>
                     <div class="price">
                         <img src="images/coin.png" id="coin-shop">
                         <p>140</p>
                         <p>200</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
-                    <button type="button" class="btn btn-primary">Like</button>
-                </div>
-            </div>
-
-            <div class="card"> <!--mossy lure module-->
-                <div class="img-card">
-                    <img src="images/products/GO_Mossy_Lure_Module.png" id="item-shop">
-                    <h3 class="discount">-30%</h3>
-                </div>
-                <div class="card-content">
-                    <h2>Mossy Lure Module</h2>
-                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
-                    <div class="price">
-                        <img src="images/coin.png" id="coin-shop">
-                        <p>140</p>
-                        <p>200</p>
-                    </div>
-                </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
-                    <button type="button" class="btn btn-primary">Like</button>
-                </div>
-            </div>
- 
-            <div class="card"> <!--magnetic lure module-->
-                <div class="img-card">
-                    <img src="images/products/GO_Magnetic_Lure_Module.png" id="item-shop">
-                    <h3 class="discount">-30%</h3>
-                </div>
-                <div class="card-content">
-                    <h2>Magnetic Lure Module</h2>
-                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
-                    <div class="price">
-                        <img src="images/coin.png" id="coin-shop">
-                        <p>140</p>
-                        <p>200</p>
-                    </div>
-                </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
-                    <button type="button" class="btn btn-primary">Like</button>
-                </div>
-            </div>
-
-            <div class="card"> <!--rainy lure module-->
-                <div class="img-card">
-                    <img src="images/products/GO_rainy_Lure_Module.png" id="item-shop">
-                    <h3 class="discount">-30%</h3>
-                </div>
-                <div class="card-content">
-                    <h2>Rainy Lure Module</h2>
-                    <p>Attracts more Pokemon than usual for 30 minutes.</p>
-                    <div class="price">
-                        <img src="images/coin.png" id="coin-shop">
-                        <p>140</p>
-                        <p>200</p>
-                    </div>
-                </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
-                    <button type="button" class="btn btn-primary">Like</button>
-                </div>
-            </div>
-
-            <div class="card"> <!--lure module-->
-                <div class="img-card">
-                    <img src="images/products/Lure_Module.png" id="item-shop">
-                    <h3 class="discount">-30%</h3>
-                </div>
-                <div class="card-content">
-                    <h2>Lure Module</h2>
-                    <p>Attracts Pokemon to a Pokestop for 30 minutes.</p>
-                    <div class="price">
-                        <img src="images/coin.png" id="coin-shop">
-                        <p>70</p>
-                        <p>100</p>
-                    </div>
-                </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
-                    <button type="button" class="btn-primary">Like</button>
-                </div>
-            </div>
-
-            <div class="card"> <!--2 lure modules-->
-                <div class="img-card">
-                    <img src="images/products/2 Lure Modules.png" id="item-shop">
-                    <h3 class="discount">-50%</h3>
-                </div>
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
-                    <button type="button" class="btn btn-primary">Like</button>
-                </div>
-                <div class="card-content">
-                    <h2>2 Lure Modules</h2>
-                    <p>Attracts Pokemon to a Pokestop for 30 minutes.</p>
-                    <div class="price">
-                        <img src="images/coin.png" id="coin-shop">
-                        <p>100</p>
-                        <p>200</p>
-                    </div>
-                </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
         </div>
-
-        <div class="raid-pass"> <!----container ng mga raid pass-->
-            <h1>Raid Pass</h1>
-            <div class="card"> <!--raid pass-->
+        <!-- Mossy Lure Module -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="img-card">
+                    <img src="images/products/GO_Mossy_Lure_Module.png" id="item-shop">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Mossy Lure Module</h2>
+                    <p>Attracts more Pokémon than usual for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png" id="coin-shop">
+                        <p>140</p>
+                        <p>200</p>
+                    </div>
+                </div>
+                <div class="card-options">
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button type="button" class="btn btn-primary">Like</button>
+                </div>
+            </div>
+        </div>
+        <!-- Magnetic Lure Module -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="img-card">
+                    <img src="images/products/GO_Magnetic_Lure_Module.png" id="item-shop">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Magnetic Lure Module</h2>
+                    <p>Attracts more Pokémon than usual for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png" id="coin-shop">
+                        <p>140</p>
+                        <p>200</p>
+                    </div>
+                </div>
+                <div class="card-options">
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button type="button" class="btn btn-primary">Like</button>
+                </div>
+            </div>
+        </div>
+        <!-- Rainy Lure Module -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="img-card">
+                    <img src="images/products/GO_rainy_Lure_Module.png" id="item-shop">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Rainy Lure Module</h2>
+                    <p>Attracts more Pokémon than usual for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png" id="coin-shop">
+                        <p>140</p>
+                        <p>200</p>
+                    </div>
+                </div>
+                <div class="card-options">
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button type="button" class="btn btn-primary">Like</button>
+                </div>
+            </div>
+        </div>
+        <!-- Lure Module -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="img-card">
+                    <img src="images/products/Lure_Module.png" id="item-shop">
+                    <h3 class="discount">-30%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>Lure Module</h2>
+                    <p>Attracts Pokémon to a Pokéstop for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png" id="coin-shop">
+                        <p>70</p>
+                        <p>100</p>
+                    </div>
+                </div>
+                <div class="card-options">
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button type="button" class="btn-primary">Like</button>
+                </div>
+            </div>
+        </div>
+        <!-- 2 Lure Modules -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="img-card">
+                    <img src="images/products/2 Lure Modules.png" id="item-shop">
+                    <h3 class="discount">-50%</h3>
+                </div>
+                <div class="card-content">
+                    <h2>2 Lure Modules</h2>
+                    <p>Attracts Pokémon to a Pokéstop for 30 minutes.</p>
+                    <div class="price">
+                        <img src="images/coin.png" id="coin-shop">
+                        <p>100</p>
+                        <p>200</p>
+                    </div>
+                </div>
+                <div class="card-options">
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
+                    <button type="button" class="btn btn-primary">Like</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="raid-pass">
+    <h1>Raid Pass</h1>
+    <div class="row">
+        <!-- Raid Pass -->
+        <div class="col-md-6">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Raid_Pass.png" id="item-shop">
                     <h3 class="discount">Free</h3>
@@ -651,15 +691,16 @@
                         <p>Free</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
-
-            <div class="card"> <!--premium raid pass-->
+        </div>
+        <!-- Premium Raid Pass -->
+        <div class="col-md-6">
+            <div class="card">
                 <div class="img-card">
                     <img src="images/products/Premium_Battle_Pass.png" id="item-shop">
                     <h3 class="discount">New</h3>
@@ -671,15 +712,16 @@
                         <p>150</p>
                     </div>
                 </div>
-
-                <div class="card-options" id="cardOptions"> <!----kapag nag-mouse hover-->
+                <div class="card-options">
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+</div>
+
 
         <footer class="mt-5">
             <div class="container">
