@@ -4,93 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="navbar"> <!----navigation bar-->
-            <div class="logo">
-                <a href="#"><img src="images/pglogo.png"></a>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/pglogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Pokemon Go
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fa fa-fw fa-user"></i> Sign In</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="links">
-                <li><a href="#">Home</a></li>
-                <li><a href="shop.html">Store</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><button><a href="login.html"></a>Sign In</button></li>
-            </ul>
+        </nav>
+
+        <div class="login-box">
+            <h2>Create an account</h2>
+            <h4>Already have an account? <a href="login.html">Log In</a></h4>
+
+            <form id="signupForm" method="post" action="signup.php" novalidate>
+                <div class="form-group">
+                    <label for="username">What should we call you?</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your Profile Name" required>
+                    <div class="invalid-feedback">Please enter a username.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">What's your email address?</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Create a password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" required>
+                    <div class="invalid-feedback">Please enter a password.</div>
+                    <small>Use 8 or more characters with a mix of letters, numbers, and symbols.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm">Confirm your password</label>
+                    <input type="password" class="form-control" id="confirm" name="confirm" placeholder="Confirm Your Password" required>
+                    <div class="invalid-feedback">Please confirm your password.</div>
+                </div>
+
+                <hr>
+
+                <p>By creating an account you agree to our <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>.</p>
+                <button type="submit" class="btn btn-primary">Create an Account</button>
+                <hr>
+                <h4>Or Continue with:</h4>
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i> Sign up with Facebook</a>
+                    <a href="#" class="btn btn-danger"><i class="fa fa-google"></i> Sign up with Google</a>
+                    <a href="#" class="btn btn-dark"><i class="fa fa-apple"></i> Sign up with Apple</a>
+                </div>
+            </form>
         </div>
 
-        <h2>Create an account</h2>
-        <h4>Already have an account? <a href="login.html">Log In</a></h4>
-
-        <form>
-            <label for="username">What should we call you?</label> <!---username input-->
-            <input type="text" placeholder="Enter Your Profile Name" name="username" id="username" required>
-
-            <label for="email">What's your email address?</label> <!---email input-->
-            <input type="text" placeholder="Enter Your Email Address" name="email" id="email" required>
-
-            <label for="password">Create a password</label> <!---password input-->
-            <i class="uil uil-eye-slash">Hide</i> <!---hide icon-->
-            <input type="password" placeholder="Enter Your Password" name="password" id="psw" required>
-            <h6>Use 8 or more characters with a mix of letters, numbers, and symbols.</h6>
-
-            <label for="confirm">Confirm your password</label> <!---confirm password-->
-            <i class="uil uil-eye-slash">Hide</i> <!--hide icon-->
-            <input type="password" placeholder="Confirm Your Password" name="confirm" id="confirm" required>
-
-            <hr>
-
-            <p>By creating an account you agree to our <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>.</p>
-            <button type="submit" class="createbtn">Create an Account</button> <!---create acc button-->
-
-            <h4>OR Continue with</h4> <!---create acc with social links-->
-            <button><img src="images/facebook_logo.png">Facebook</button>
-            <button><img src="images/google_logo.png">Google</button>
-            <button><img src="images/apple_logo.png">Apple</button>
-        </form>
-
-        <footer> <!----Footer | by column ko siya ginawa, base dun sa wireframe-->
-            <div class="col-1"> <!----column 1-->
-                <h2>Gotta Catch Em' All</h2>
-                <div class="socials">
-                    <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
-                    <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
-                    <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+        <footer class="mt-5">
+            <footer class="mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2>Gotta Catch Em' All</h2>
+                            <div class="socials">
+                                <a href="www.twitter.com"><i class="fa fa-twitter-square"></i></a>
+                                <a href="www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                                <a href="www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                            <div class="policies">
+                                <h6>Privacy Policies</h6>
+                                <h6>Terms of Services</h6>
+                            </div>
+                            <h5>THIS IS FOR ACADEMIC USE ONLY.
+                                POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
+                                IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
+                            </h5>
+                        </div>
+            
+                        <div class="col-md-4">
+                            <img src="images/pglogo.png" class="img-fluid" alt="Pokemon Go Logo">
+                            <h5>Links</h5>
+                            <a href="#">Home</a>
+                            <a href="shop.html">Store</a>
+                            <a href="history.html">History</a>
+                            <a href="profile.html">Profile</a>
+                        </div>
+            
+                        <div class="col-md-4">
+                            <h5>Help</h5>
+                            <a href="payment.html">Payment Options</a>
+                            <a href="#">Return</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+            
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <small>
+                                Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
+                                countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
+                                logo are trademarks of Google LLC.
+                            </small>
+                        </div>
+                    </div>
                 </div>
-                <div class="policies">
-                    <h6>Privacy Policies</h6>
-                    <h6>Terms of Services</h6>
-                </div>
-                <h5>THIS IS FOR ACADEMIC USE ONLY.
-                    POKEMON GO IS CREATED BY NIANTIC COMPANY, AND
-                    IS NOT OFFICIALLY PARTNERED BY WEB STINGERS.
-                </h5>
-            </div>
-
-            <div class="col-2"> <!---column 2-->
-                <img src="images/pglogo.png">
-                <h5>Links</h5>
-                <a href="#">Home</a>
-                <a href="shop.html">Store</a>
-                <a href="history.html">History</a>
-                <a href="profile.html">Profile</a>
-            </div>
-
-            <div class="col-3"> <!---column 3-->
-                <h5>Help</h5>
-                <a href="payment.html">Payment Options</a>
-                <a href="#">Return</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-
-            <h6> <!----sa bottom part na to-->
-                Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other
-                countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play
-                logo are trademarks of Google LLC.
-            </h6>
         </footer>
     </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript form validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var form = document.getElementById('signupForm');
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
 </body>
 </html>
