@@ -65,8 +65,8 @@ footer {
 
 }
 #item-shop{
-    width: 30;
-    height: auto;
+    width: auto;
+    height: 80px;
 }
 #coin{ 
     width: 20px; 
@@ -93,69 +93,67 @@ footer {
     width: 100%;
     height: auto;
 }
-
-/* Adjustments for your existing container */
 .container {
-    max-width: 1200px; /* Adjust the maximum width of the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Add padding to the sides of the container */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px;
 }
 .cart-header {
-    background-color: #f8f9fa; /* Background color of the header */
-    padding: 20px 0; /* Add some padding for spacing */
+    background-color: #f8f9fa; 
+    padding: 20px 0; 
 }
 .cart-header img {
     display: block;
-    margin: 0 auto; /* Center the image */
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    margin: 0 auto;
+    max-width: 100%; 
 }
 .cart-header {
-    background-color: #f8f9fa; /* Background color of the header */
-    padding: 20px 0; /* Add some padding for spacing */
+    background-color: #f8f9fa; 
+    padding: 20px 0;
 }
 .cart-header img {
     display: block;
-    margin: 0 auto; /* Center the image */
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    margin: 0 auto; 
+    max-width: 100%; 
 }
 .history-container {
-    padding: 20px 0; /* Add some padding for spacing */
+    padding: 20px 0;
 }
 .cart-header {
-    background-color: #f8f9fa; /* Background color of the header */
-    padding: 20px 0; /* Add some padding for spacing */
-    text-align: center; /* Center align the content */
+    background-color: #f8f9fa; 
+    padding: 20px 0;
+    text-align: center; 
 }
 .cart-header img {
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    max-width: 100%; 
 }
 .cart-container {
-    margin-top: 20px; /* Add margin to separate it from the header */
-    text-align: center; /* Center align the content */
+    margin-top: 20px; 
+    text-align: center; 
 }
 .cart-table {
-    display: inline-block; /* Display as inline-block to center align */
-    text-align: left; /* Align the table contents to the left */
-    width: 80%; /* Set the width of the table */
-    max-width: 800px; /* Limit the maximum width */
-    margin: 0 auto; /* Center the table horizontally */
-    padding: 20px; /* Add some padding for spacing */
+    display: inline-block; 
+    text-align: left; 
+    width: 80%; 
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px;
 }
 .profile-display img {
-    max-width: 100px; /* Adjust the maximum width of the profile picture */
-    height: auto; /* Maintain the aspect ratio */
+    max-width: 100px; 
+    height: auto; 
 }
 .left-side img {
-    max-width: 50px; /* Adjust the maximum width of the small icons */
-    height: auto; /* Maintain the aspect ratio */
+    max-width: 50px; 
+    height: auto;
 }
 .profile-pic {
-    width: 100px; /* Adjust the width of the profile picture */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px; 
+    height: auto; 
 }
 .edit-profile-icon {
-    width: 20px; /* Adjust the width of the edit profile icon */
-    height: auto; /* Maintain aspect ratio */
+    width: 20px;
+    height: auto; 
 }
 .settings-group {
     margin-bottom: 20px;
@@ -213,4 +211,123 @@ input:checked + .settings-slider:before {
 }
 .settings-slider.round:before {
     border-radius: 50%;
+}
+.bg-header {
+    text-align: center;
+    margin-top: 30px;
+}
+.bg-header img {
+    max-width: 100%;
+}
+.payment-container {
+    margin-top: 30px;
+}
+.payment-container .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.payment-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.payment-details form {
+    display: flex;
+    width: 100%;
+}
+.payment-details form .col-1, .payment-details form .col-2 {
+    flex: 1;
+    padding: 10px;
+}
+.payment-details form label {
+    margin-top: 10px;
+}
+.payment-details form .date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.payment-details form .date input {
+    width: 45%;
+}
+.payment-details form .pay-subtotal, .payment-details form .pay-total {
+    display: flex;
+    align-items: center;
+}
+.payment-details form .pay-subtotal img, .payment-details form .pay-total img {
+    margin-right: 5px;
+    width: 20px;
+}
+.payment-details form button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.payment-details form button span {
+    margin-left: 5px;
+}
+.card-logo {
+    width: 50px;
+    margin-right: 10px;
+    height: auto;
+}
+.cart-header img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.cart-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-table th, .cart-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.cart-table th:first-child, .cart-table td:first-child {
+    width: 40%;
+}
+.cart-table th:last-child, .cart-table td:last-child {
+    text-align: right;
+}
+.cart-info {
+    display: flex;
+    align-items: center;
+}
+.cart-info img {
+    width: 50px;
+    margin-right: 10px;
+}
+.cart-price {
+    display: flex;
+    align-items: center;
+}
+.cart-price img {
+    width: 20px;
+    margin-right: 5px;
+}
+.total-price {
+    margin-top: 20px;
+    text-align: right;
+}
+.total-price table {
+    width: 50%;
+    margin-left: auto;
+}
+.total-price th, .total-price td {
+    padding: 10px;
+    text-align: left;
+}
+.total-price th:last-child, .total-price td:last-child {
+    text-align: right;
+}
+.cart-button {
+    text-align: center;
+    margin-top: 20px;
 }

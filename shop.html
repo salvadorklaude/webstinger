@@ -9,6 +9,184 @@
     <!-- Link your custom CSS file -->
     <link href="css/styles.css" rel="stylesheet">
     <title>Store</title>
+    <style>
+/* Mini Cart Popup Styling */
+.mini-cart-popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mini-cart-content {
+    min-width: 500px; /* Adjust the value as needed */
+    padding: 40px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Add backdrop-filter for blurring */
+    z-index: 998;
+}
+
+
+/* Adjustments to ensure overlay covers other elements */
+.navbar {
+    z-index: 997; /* Ensure navbar is below overlay */
+}
+
+.box-grid-container {
+    position: relative;
+    z-index: 996; /* Ensure box container is below overlay */
+}
+
+.bg-shop img {
+    position: relative;
+    z-index: 995; /* Ensure background image is below overlay */
+}
+
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const miniCartPopup = document.getElementById('mini-cart-popup');
+            const cartIcon = document.querySelector('.fa-shopping-cart');
+            const closePopup = document.querySelector('.close');
+        
+            // Function to open mini cart popup
+            function openMiniCartPopup() {
+                miniCartPopup.style.display = 'block';
+                document.body.classList.add('overlay');
+            }
+        
+            // Function to close mini cart popup
+            function closeMiniCartPopup() {
+                miniCartPopup.style.display = 'none';
+                document.body.classList.remove('overlay');
+            }
+        
+            // Event listener for cart icon click
+            cartIcon.addEventListener('click', function() {
+                openMiniCartPopup();
+            });
+        
+            // Event listener for close button click
+            closePopup.addEventListener('click', function() {
+                closeMiniCartPopup();
+            });
+        
+            // Rest of your existing code for adding/removing items from cart
+        });
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const miniCart = document.getElementById('mini-cart');
+            const cartItems = document.getElementById('cart-items');
+            const totalCostElement = document.getElementById('total-cost');
+            let totalCost = 0;
+        
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemName = this.getAttribute('data-name');
+                    const itemPrice = parseFloat(this.getAttribute('data-price'));
+                    const itemImage = this.getAttribute('data-image'); // Added to get image URL
+        
+                    // Check if item is already in the cart
+                    let existingItem = cartItems.querySelector(`li[data-name="${itemName}"]`);
+                    if (existingItem) {
+                        // Increment quantity if item already exists
+                        const quantityElement = existingItem.querySelector('.quantity');
+                        let quantity = parseInt(quantityElement.textContent);
+                        quantity++;
+                        quantityElement.textContent = quantity;
+                    } else {
+                        // Create list item for the cart
+                        const li = document.createElement('li');
+                        li.setAttribute('data-name', itemName);
+                        
+                        // Product Image
+                        const img = document.createElement('img');
+                        img.src = itemImage;
+                        img.width = 50;
+                        img.height = 50;
+                        li.appendChild(img);
+                        
+                        // Product Name and Price
+                        const textContent = document.createElement('span');
+                        textContent.textContent = `${itemName} - $${itemPrice} `;
+                        li.appendChild(textContent);
+                        
+                        // Quantity
+                        const quantitySpan = document.createElement('span');
+                        quantitySpan.textContent = 'Quantity: ';
+                        const quantityElement = document.createElement('span');
+                        quantityElement.textContent = '1'; // Initial quantity
+                        quantityElement.classList.add('quantity');
+                        quantitySpan.appendChild(quantityElement);
+                        li.appendChild(quantitySpan);
+                        
+                        // Remove button
+                        const removeButton = document.createElement('button');
+                        removeButton.textContent = 'Remove';
+                        removeButton.classList.add('remove-item');
+                        li.appendChild(removeButton);
+        
+                        // Add item to the cart
+                        cartItems.appendChild(li);
+                    }
+        
+                    // Update total cost
+                    totalCost += itemPrice;
+                    totalCostElement.textContent = totalCost.toFixed(2);
+        
+                    // Show mini cart
+                    miniCart.style.display = 'block';
+                });
+            });
+        
+            // Event listener for removing an item from the cart
+            cartItems.addEventListener('click', function(event) {
+                if (event.target.classList.contains('remove-item')) {
+                    const itemToRemove = event.target.parentNode;
+                    const itemName = itemToRemove.getAttribute('data-name');
+                    const itemPrice = parseFloat(itemToRemove.querySelector('span').textContent.split(' - ')[1]); // Extract price
+                    const quantity = parseInt(itemToRemove.querySelector('.quantity').textContent);
+                    
+                    // Update total cost
+                    totalCost -= itemPrice * quantity;
+                    totalCostElement.textContent = totalCost.toFixed(2);
+        
+                    // Remove item from the cart
+                    cartItems.removeChild(itemToRemove);
+        
+                    // Hide mini cart if cart is empty
+                    if (cartItems.children.length === 0) {
+                        miniCart.style.display = 'none';
+                    }
+                }
+            });
+        });        
+    </script>
+    
 </head>
 <body>
   
@@ -26,7 +204,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="shop.html">Store</a>
@@ -47,44 +225,22 @@
             </div>
         </nav>
 
-        
-        <div id="cartPopup" class="cart-Popup"> <!---Ito yung popup para sa shopping cart-->
-            <div class="title">
-                <h1>Shopping Cart</h1>
-                <a href="#"><i class="fa fa-close"></i></a>
-            </div>
-            <div class="cart-table">
-                <tr>
-                    <td><img src="images/products/Great_Box.png" id="item-shop"></td>
-                    <td>
-                        <div class="cart-details">
-                            <h4>Great Box</h4>
-                            <p>1 <span>x</span></p>
-                            <div class="coin-img">
-                                <img src="images/coin.png">
-                                <p>550</p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-close"></i></a></td>
-                </tr>
-                <tr></tr> <!----for space lng to-->
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr>
-                    <td>Subtotal</td>
-                    <td></td>
-                    <td></td>
-                    <td><img src="images/coin.png">550</td>
-                </tr>
-            </div>
-
-            <div class="cart-button">
-                <button>Cart</button>
-                <button>Checkout</button>
-            </div>
+<!-- Mini Cart Popup Box -->
+<div id="mini-cart-popup" class="mini-cart-popup">
+    <div class="mini-cart-content">
+        <span class="close">&times;</span>
+        <h4>Cart</h4>
+        <ul id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p>Total: <span id="total-cost">0</span></p>
+        <div class="buttons">
+            <button id="checkout" class="btn btn-success">Checkout</button>
         </div>
+    </div>
+</div>
+
+
 
         <div class="bg-shop"> <!---header background-->
             <img src="images/wallpapers/Shop.png">
@@ -109,7 +265,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Special Box" 
+                    data-price="250" 
+                    data-image="images/products/Special_Box.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -132,7 +293,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Bronze Box" 
+                    data-price="460" 
+                    data-image="images/products/Bronze_Box.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -156,7 +322,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Great Box" 
+                    data-price="550" 
+                    data-image="images/products/Great_Box.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -181,7 +352,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Ultra Box" 
+                    data-price="750" 
+                    data-image="images/products/Ultra_Box.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -206,7 +382,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Silver Box" 
+                    data-price="980" 
+                    data-image="images/products/Silver_Box.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -232,7 +413,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Gold Box" 
+                    data-price="1710" 
+                    data-image="images/products/Gold_Box.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -258,7 +444,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="600 Coins" 
+                    data-price="149.00" 
+                    data-image="images/products/600 Coins.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -278,7 +469,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="1300 Coins" 
+                    data-price="289.00" 
+                    data-image="images/products/1300 Coins.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -298,7 +494,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="2700 Coins" 
+                    data-price="589.00" 
+                    data-image="images/products/2700 Coins.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -318,7 +519,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="5600 Coins" 
+                    data-price="1169.00" 
+                    data-image="images/products/5600 Coins.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -340,7 +546,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="15500 Coins" 
+                    data-price="2950.00" 
+                    data-image="images/products/15500 Coins.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -365,7 +576,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Pokeball small" 
+                    data-price="100" 
+                    data-image="images/products/Pokeball small.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -385,7 +601,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Pokeball small" 
+                    data-price="460" 
+                    data-image="images/products/Pokeball small.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -407,7 +628,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="200 Pokeballs" 
+                    data-price="660" 
+                    data-image="images/products/200 Pokeballs.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -429,7 +655,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="400 Pokeballs" 
+                    data-price="800" 
+                    data-image="images/products/400 Pokeballs.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -456,7 +687,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Incubator" 
+                    data-price="150" 
+                    data-image="images/products/Incubator.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -479,7 +715,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="2 Incubators" 
+                    data-price="270" 
+                    data-image="images/products/2 Incubators.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -500,7 +741,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Incubator Super" 
+                    data-price="200" 
+                    data-image="images/products/Incubator_Super.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -523,7 +769,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="2 Super Incubators" 
+                    data-price="320" 
+                    data-image="images/products/2 Super Incubators.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -551,7 +802,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Glacial_Lure_Module" 
+                    data-price="140" 
+                    data-image="images/products/Glacial_Lure_Module.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -574,7 +830,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="GO_Mossy_Lure_Module" 
+                    data-price="140" 
+                    data-image="images/products/GO_Mossy_Lure_Module.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -597,7 +858,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="GO_Magnetic_Lure_Module" 
+                    data-price="140" 
+                    data-image="images/products/GO_Magnetic_Lure_Module.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -620,7 +886,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="GO_rainy_Lure_Module" 
+                    data-price="140" 
+                    data-image="images/products/GO_rainy_Lure_Module.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -643,7 +914,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Lure_Module" 
+                    data-price="70" 
+                    data-image="images/products/Lure_Module.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn-primary">Like</button>
                 </div>
@@ -666,7 +942,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="2 Lure Modules" 
+                    data-price="100" 
+                    data-image="images/products/2 Lure Modules.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -692,7 +973,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Raid Pass" 
+                    data-price="0" 
+                    data-image="images/products/Raid_Pass.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i class="fa fa-share-alt"></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>
@@ -713,7 +999,12 @@
                     </div>
                 </div>
                 <div class="card-options">
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" 
+                    data-name="Premium Battle Pass" 
+                    data-price="150" 
+                    data-image="images/products/Premium_Battle_Pass.png"> <!-- Added data-image attribute -->
+                        Add to Cart
+                    </button>
                     <button type="button" class="btn btn-link"><a href="#" class="share-link"><i></i>Share</a></button>
                     <button type="button" class="btn btn-primary">Like</button>
                 </div>

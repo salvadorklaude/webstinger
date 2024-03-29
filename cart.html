@@ -83,74 +83,80 @@
             </div>
         </div>
 
-        <div class="cart-header"> <!----header-->
-            <img src="images/wallpapers/Cart.png">
-        </div>
+       
 
-        <div class="cart-container">
-            <div class="cart-table"> <!---naka table yung cart-->
-                <table>
-                    <tr>
-                        <th>Reference</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                        <th></th> <!---for the remove button-->
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="cart-info"> <!---pic and text-->
-                                <img src="images/products/Great_Box.png" id="item-shop">
-                                <div>
-                                    <p>Great Box</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="cart-price"> <!--coin image and the price-->
-                                <img src="images/coin.png" id="coin-shop">
-                                <div>
-                                    <p>550</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td><input type="number" value="1"></td> <!---quantity-->
-                        <td>
-                            <div class="cart-subtotal"> <!---subtotal-->
-                                <img src="images/coin.png" id="coin-shop">
-                                <div>
-                                    <p>550</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td><button><a href="#"><i class="fa fa-trash-o"></i></a></button></td> <!---remove button-->
-                    </tr>
-                </table>
-
-                <div class="total-price"> <!---2nd table (Cart Total)-->
-                    <h1>Cart Total</h1>
+        <body>
+            <div class="container">
+                <div class="cart-header">
+                    <img src="images/wallpapers/Cart.png" alt="Cart Header">
+                </div>
+                <div class="cart-table">
                     <table>
-                        <tr>
-                            <th>Subtotal </th>
-                            <td> 550</td>
-                        </tr>
-                        <tr>
-                            <th>Total</th>
-                            <td>
-                                <div class="cart-total">
-                                    <img src="images/coin.png" id="coin">
-                                    <div>
-                                        <p>550</p>
+                        <thead>
+                            <tr>
+                                <th>Reference</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cart-info">
+                                        <img src="images/products/Great_Box.png" alt="Great Box" id="item-shop">
+                                        <div>
+                                            <p>Great Box</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                                <td>
+                                    <div class="cart-price">
+                                        <img src="images/coin.png" alt="Coin">
+                                        <div>
+                                            <p>550</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><input type="number" value="1"></td>
+                                <td>
+                                    <div class="cart-price">
+                                        <img src="images/coin.png" alt="Coin">
+                                        <div>
+                                            <p>550</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
-
-                    <button type="button" class="btn btn-primary"><a href="#"></a>Checkout</button> <!---checkout button-->
+                </div>
+                <div class="total-price">
+                    <h3>Cart Total</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Subtotal</th>
+                                <td>550</td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <td>
+                                    <div class="cart-price">
+                                        <img src="images/coin.png" alt="Coin">
+                                        <div>
+                                            <p>550</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cart-button">
+                    <button type="button" class="btn btn-primary">Checkout</button>
                 </div>
             </div>
-        </div>
 
         <!-- Footer -->
         <footer class="mt-5">
