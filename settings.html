@@ -44,134 +44,53 @@
                 </ul>
             </div>
         </nav>
-        <div id="cartPopup" class="cart-Popup"> <!---Ito yung popup para sa shopping cart-->
-            <div class="title">
-                <h1>Shopping Cart</h1>
-                <a href="#"><i class="fa fa-close"></i></a>
-            </div>
-            <div class="cart-table">
-                <tr>
-                    <td><img src="images/products/Great_Box.png"></td>
-                    <td>
-                        <div class="cart-details">
-                            <h4>Great Box</h4>
-                            <p>1 <span>x</span></p>
-                            <div class="coin-img">
-                                <img src="images/coin.png">
-                                <p>550</p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-close"></i></a></td>
-                </tr>
-                <tr></tr> <!----for space lng to-->
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr>
-                    <td>Subtotal</td>
-                    <td></td>
-                    <td></td>
-                    <td><img src="images/coin.png">550</td>
-                </tr>
-            </div>
-
-            <div class="cart-button">
-                <button>Cart</button>
-                <button>Checkout</button>
-            </div>
-        </div>
-
-        <div class="top"> <!--top part: my profile, search, and filter-->
-            <h1>My Profile</h1>
-            <button><i class="fa fa-search"></i><input type="text" placeholder="Search" name="search"></button>
-            <button>Filter<img src="images/filter.png"></button>
-        </div>
-
-        <div class="left-side"> <!---left side: personal information and settings-->
-            <div class="profile-display">
-                <img src="images/profile-pic.png"> <!--profile pic-->
-                <div class="profile-content">
-                    <h6>Hello<i>&#128075</i></h6> <!--profile name-->
-                    <h4>Robert Fox</h4>
-                </div>
-                <hr>
-            </div>
-            <div class="navigation"> <!---navigations-->
-                <button><a href="#"></a>Personal Information</button>
-                <button><a href="#"></a>Settings</button>
-            </div>
-        </div>
-
-        <div class="right-side"> <!---right side: settings-->
-            <div class="grp-1"> <!--appearance-->
-                <div class="set-1"> <!--left side-->
-                    <h5>Appearance</h5>
-                    <h6>Customize how your theme looks on your device</h6>
-                </div>
-                <select name="appearance" id="appearance"> <!--right side-->
+        <div class="settings">
+            <div class="settings-group">
+                <h5>Appearance</h5>
+                <select class="form-control">
                     <option value="light">Light</option>
                     <option value="gray">Gray</option>
                     <option value="dark">Dark</option>
                 </select>
             </div>
-
-            <div class="grp-2"> <!---language-->
-                <div class="set-2"> <!--left-->
-                    <h5>Language</h5>
-                    <h6>Select your preferred language</h6>
-                </div>
-                <select name="lang" id="lang"> <!--right-->
+            <div class="settings-group">
+                <h5>Language</h5>
+                <select class="form-control">
                     <option value="english">English</option>
                     <option value="mandarin">Mandarin</option>
                     <option value="japanese">Japanese</option>
                 </select>
             </div>
-
-            <div class="grp-3"> <!--two-factor-->
-                <div class="set-3"> <!--left-->
-                    <h5>Two-Factor Authentication</h5>
-                    <h6>Keep your account secure by enabling 2FA via email</h6>
-                </div>
-                <label class="switch"> <!--right-->
+            <div class="settings-group">
+                <h5>Two-Factor Authentication</h5>
+                <label class="settings-switch">
                     <input type="checkbox">
-                    <span class="slider round"></span>
+                    <span class="settings-slider round"></span>
                 </label>
             </div>
-
-            <div class="grp-4"> <!--push notif-->
-                <div class="set-4"> <!--left-->
-                    <h5>Push Notifications</h5>
-                    <h6>Receive push notifications</h6>
-                </div>
-                <label class="switch"> <!--right-->
+            <div class="settings-group">
+                <h5>Push Notifications</h5>
+                <label class="settings-switch">
                     <input type="checkbox">
-                    <span class="slider round"></span>
+                    <span class="settings-slider round"></span>
                 </label>
             </div>
-
-            <div class="grp-5"> <!--desktop notif-->
-                <div class="set-5"> <!--left-->
-                    <h5>Desktop Notifications</h5>
-                    <h6>Receive push notifications in your desktop</h6>
-                </div>
-                <label class="switch"> <!--right-->
+            <div class="settings-group">
+                <h5>Desktop Notifications</h5>
+                <label class="settings-switch">
                     <input type="checkbox">
-                    <span class="slider round"></span>
+                    <span class="settings-slider round"></span>
                 </label>
             </div>
-
-            <div class="grp-6"> <!--email notif-->
-                <div class="set-6"> <!--left-->
-                    <h5>Email Notifications</h5>
-                    <h6>Receive email notifications</h6>
-                </div>
-                <label class="switch"> <!--right-->
+            <div class="settings-group">
+                <h5>Email Notifications</h5>
+                <label class="settings-switch">
                     <input type="checkbox">
-                    <span class="slider round"></span>
+                    <span class="settings-slider round"></span>
                 </label>
             </div>
         </div>
+
 
         <footer class="mt-5">
             <div class="container">
