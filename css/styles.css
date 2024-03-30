@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .navbar {
-    background-color: aqua;
+    background-color:#02033B;
     border-bottom: 2px solid #fff;
     padding: 10px;
 }
@@ -29,7 +29,7 @@
 }
 
 .navbar .links ul li a {
-    color: #fff;
+    color: #02033B;
     text-decoration: none;
 }
 
@@ -38,8 +38,7 @@
 }
 
 .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #02033B;
     padding: 20px;
     margin: 20px;
 }
@@ -54,14 +53,17 @@
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background-color: #02033B;
+    display: flex;
+    color: #FFC247;
+    padding: auto;
     text-align: center;
+    width: auto;
+    height: auto;
 }
 #coin-shop{
     width: 60px; 
-    height: 60px; 
+    height: auto; 
 
 }
 #item-shop{
