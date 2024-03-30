@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Settings</title>
 </head>
+<style>
+    .container{
+    background-color: white;
+
+    }
+</style>
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,7 +59,7 @@
                 <select class="form-control">
                     <option value="light">Light</option>
                     <option value="gray">Gray</option>
-                    <option value="dark">Dark</option>
+                    <option id="dark" value="dark">Dark</option>
                 </select>
             </div>
             <div class="settings-group">
@@ -143,6 +149,14 @@
                 </div>
             </div>
         </footer>
+        <script>
+            document.getElementById("dark").addEventListener("click",function(){
+    let dark = document.getElementsByClassName("container");
+
+    dark.style.backgroundColor = "lightblue";
+    dark.style.color = "red";
+});
+        </script>
         
     </div>
 </body>
