@@ -279,6 +279,11 @@ input:checked + .settings-slider:before {
     margin-right: 10px;
     height: auto;
 }
+
+.cart-container {
+    display: flex;
+}
+
 .cart-header img {
     width: 100%;
     margin-bottom: 20px;
@@ -287,6 +292,11 @@ input:checked + .settings-slider:before {
     width: 100%;
     border-collapse: collapse;
 }
+
+.cart-table th {
+    background-color: rgb(232, 224, 181);
+}
+
 .cart-table th, .cart-table td {
     border-bottom: 1px solid #ddd;
     padding: 10px;
@@ -317,17 +327,27 @@ input:checked + .settings-slider:before {
 .total-price {
     margin-top: 20px;
     text-align: right;
+    width: 400px;
 }
 .total-price table {
     width: 50%;
     margin-left: auto;
 }
+
+.total-price th {
+    background-color: rgb(232, 224, 181);
+}
+
 .total-price th, .total-price td {
     padding: 10px;
     text-align: left;
 }
 .total-price th:last-child, .total-price td:last-child {
     text-align: right;
+}
+
+.total-price .cart-button {
+    padding-left: 50px;
 }
 .cart-button {
     text-align: center;
